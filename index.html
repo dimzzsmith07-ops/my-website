@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== CANVAS CONFETTI ========== -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- ========== FLOATING HEARTS ========== -->
+  <div id="heartsContainer"></div>
+
+  <!-- ========== MUSIC CONTROL ========== -->
+  <div class="music-btn" id="musicBtn" title="Play/Pause Musik">
+    <span id="musicIcon">▶</span>
+    <span class="music-label">Musik</span>
+  </div>
+  <!--
+    🎵 MUSIK: Ganti src di bawah dengan file "Ini Abadi - Perunggu.mp3" milikmu
+    Caranya: download lagunya, taruh satu folder dengan index.html,
+    lalu ganti src menjadi: src="ini-abadi-perunggu.mp3"
+  -->
+  <audio id="bgMusic" loop>
+    <source src="Ini Abadi_musicaldown.com_1776051795.mp3" type="audio/mpeg">
+    <!-- Fallback jika file belum ada -->
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946b5ba7a9.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ========== LANDING PAGE ========== -->
+  <section id="landing">
+    <div class="landing-inner">
+      <p class="landing-sub fade-in-delay-1">FOR YOU ALIYAH NATASYA SYAMSIYAH ✨</p>
+      <h1 class="landing-title fade-in-delay-2">Happy Birthday</h1>
+      <div class="cake-emoji fade-in-delay-3">🎂</div>
+      <p class="typewriter-wrap fade-in-delay-4">
+        <span id="typewriterText"></span><span class="cursor">|</span>
+      </p>
+      <button class="scroll-btn fade-in-delay-5" onclick="scrollToSection('message')">
+        Lihat Kejutan ↓
+      </button>
+    </div>
+
+    <!-- petal decorations -->
+    <div class="petal p1">🌸</div>
+    <div class="petal p2">🌷</div>
+    <div class="petal p3">🌸</div>
+    <div class="petal p4">🌺</div>
+    <div class="petal p5">🌷</div>
+  </section>
+
+  <!-- ========== PESAN PERSONAL ========== -->
+  <section id="message">
+    <div class="section-header">
+      <h2>HEYY INII BUATT KAMUU 💌</h2>
+      <div class="divider"><span>✦</span></div>
+    </div>
+    <div class="message-card">
+      <p class="msg-open">Hei, kamu yang sedang membaca ini…</p>
+      <p>
+        Hari ini hari yang spesial buat kamu, selamat ulang tahun yaa sayang.maaff bangett
+        kalo nantii kado nyaa tu telat. akuu baru bisa ngasihh ini dulu, setelah akuu
+        lomba lks akuu kasihh yaaa. semoga di umur kamu yang sekarang semua hal baik deket sama kamu
+    
+      </p>
+      <p>
+        Aku ingin kamu tahu bahwa kehadiranmu bukan hal biasa. Kamu adalah salah
+        satu alasan mengapa hari-hari terasa lebih ringan, mengapa senyum datang
+        lebih mudah, dan mengapa hidup terasa lebih bermakna. Setiap detik
+        bersamamu adalah hadiah yang tidak pernah aku anggap sepele.
+      </p>
+      <p>
+        Di hari ulang tahunmu ini, aku berharap semua impianmu yang selama ini
+        kamu simpan dalam hati — yang kamu bisikkan dalam doa-doa sunyi di malam
+        hari — semoga satu per satu menjadi nyata. Kamu layak mendapatkan semua
+        kebahagiaan yang ada di dunia ini, dan bahkan lebih dari itu. AMINN...
+      </p>
+      <p>
+        Terima kasih yaa atas kehadiran kamu.Terima kasih
+        sudah membiarkan hidupku bersentuhan dengan kisahmu.
+      </p>
+      <p class="msg-close">
+        Selamat ulang tahun, sayang. Semoga tahun ini membawa lebih banyak cahaya,
+        lebih banyak cinta, dan lebih banyak alasan untuk tersenyum. 🌸
+      </p>
+      <p class="msg-signature">— Dengan cinta yang tulus 💕</p>
+    </div>
+  </section>
+
+  <!-- ========== GALERI FOTO ========== -->
+  <section id="gallery">
+    <div class="section-header">
+      <h2>Kenangan Kita 📷</h2>
+      <div class="divider"><span>✦</span></div>
+      <p class="section-desc">Setiap foto menyimpan seribu kata yang tak terucap</p>
+    </div>
+    <div class="gallery-grid">
+      <!-- 6 foto — semua ukuran sama (square) -->
+      <div class="photo-card" style="--i:1"><img src="kenangan 4.jpeg" alt="Kenangan 1" loading="lazy"><div class="photo-overlay"><span>Bahagia Selalu 🌸</span></div></div>
+      <div class="photo-card" style="--i:2"><img src="kenangan 5.jpeg" alt="Kenangan 2" loading="lazy"><div class="photo-overlay"><span>Momen Indah ✨</span></div></div>
+      <div class="photo-card" style="--i:3"><img src="kenangan 2.jpeg" alt="Kenangan 3" loading="lazy"><div class="photo-overlay"><span>Tertawa Bersama 😄</span></div></div>
+      <div class="photo-card" style="--i:4"><img src="kenangan 3.jpeg" alt="Kenangan 4" loading="lazy"><div class="photo-overlay"><span>Indahnya Bersama 🌷</span></div></div>
+      <div class="photo-card" style="--i:5"><img src="kenangan 6.jpeg" alt="Kenangan 5" loading="lazy"><div class="photo-overlay"><span>Cahayamu 🌟</span></div></div>
+      <div class="photo-card" style="--i:6"><img src="kenangan 7.jpeg" alt="Kenangan 6" loading="lazy"><div class="photo-overlay"><span>Selamanya ♾️</span></div></div>
+    </div>
+  </section>
+
+  <!-- ========== TOMBOL KEJUTAN ========== -->
+  <section id="surprise">
+    <div class="surprise-wrap">
+      <h2>Ada sesuatu untukmu… 🎁</h2>
+      <p>Tekan tombol di bawah untuk sebuah kejutan kecil yang menyentuh hati</p>
+      <button class="surprise-btn" id="surpriseBtn" onclick="showSurprise()">
+        Klik untuk Kejutan 🎁
+      </button>
+    </div>
+
+    <!-- Popup Kejutan -->
+    <div id="surpriseModal" class="modal-overlay">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeSurprise()">✕</button>
+        <div class="modal-emoji">🌟</div>
+        <h3>Kamu adalah bintang terbaikku</h3>
+        <p>
+          Di antara miliaran bintang di langit malam, mataku selalu mencarimu.
+          Kamu bukan hanya seseorang yang spesial — kamu adalah alasan mengapa
+          aku percaya bahwa keajaiban itu nyata.
+        </p>
+        <p>Semoga hidupmu selalu dipenuhi cahaya, cinta, dan kebahagiaan. 💫</p>
+        <div class="modal-hearts">💕 💖 💕</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>Dibuat dengan penuh cinta untuk hari yang paling istimewa 💝</p>
+    <p class="footer-year">© 2025 — Happy Birthday!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
